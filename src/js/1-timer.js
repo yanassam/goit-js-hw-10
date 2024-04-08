@@ -8,6 +8,7 @@ import iziToast from 'izitoast';
 // Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
 
+import errorIcon from '../img/vite-logo.png';
 const input = document.querySelector('#datetime-picker');
 const startBtn = document.querySelector('[data-start]');
 const timer = document.querySelector('.js-timer');
@@ -26,7 +27,7 @@ const options = {
       return iziToast.error({
         message: 'Please choose a date in the future',
         position: 'topRight',
-        iconUrl: './img/vite-logo.png',
+        iconUrl: errorIcon,
       });
     }
     startBtn.disabled = false;
