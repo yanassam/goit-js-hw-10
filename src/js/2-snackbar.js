@@ -22,10 +22,7 @@ function addResult(event) {
           delay
         );
       }
-      setTimeout(
-        () => resolve(`\u2705 Fulfilled promise in ${delay}ms`),
-        delay
-      );
+      setTimeout(() => resolve(`Fulfilled promise in ${delay}ms`), delay);
     });
   }
 
@@ -35,7 +32,7 @@ function addResult(event) {
       iziToast.success({
         message: response,
         position: 'topRight',
-        iconUrl: '',
+        iconUrl: '\u2705',
       });
     })
     .catch(error => {
@@ -43,6 +40,7 @@ function addResult(event) {
       iziToast.error({
         message: error,
         position: 'topRight',
+        iconUrl: '\u274C',
       });
     });
 
