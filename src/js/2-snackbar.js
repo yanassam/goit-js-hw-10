@@ -18,11 +18,14 @@ function addResult(event) {
     return new Promise((resolve, reject) => {
       if (checkedInput === 'rejected') {
         return setTimeout(
-          () => reject(`Rejected promise in ${delay}ms`),
+          () => reject(`\u274C Rejected promise in ${delay}ms`),
           delay
         );
       }
-      setTimeout(() => resolve(`Fulfilled promise in ${delay}ms`), delay);
+      setTimeout(
+        () => resolve(`\u2705 Fulfilled promise in ${delay}ms`),
+        delay
+      );
     });
   }
 
