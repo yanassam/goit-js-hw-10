@@ -55,6 +55,7 @@ fieldset{
   margin-top: 16px;
   display: flex;
   gap: 48px;
+  padding-left: 48px;
 }
 fieldset:hover{
   border-color: #000000;
