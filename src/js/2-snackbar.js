@@ -35,7 +35,7 @@ function addResult(event) {
       iziToast.success({
         message: response,
         position: 'topRight',
-        iconUrl: '\u2705',
+        iconUrl: '',
       });
     })
     .catch(error => {
@@ -43,7 +43,7 @@ function addResult(event) {
       iziToast.error({
         message: error,
         position: 'topRight',
-        iconUrl: '\u274C',
+        iconUrl: '',
       });
     });
 
