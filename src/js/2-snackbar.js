@@ -3,6 +3,9 @@ import iziToast from 'izitoast';
 // Додатковий імпорт стилів
 import 'izitoast/dist/css/iziToast.min.css';
 
+import errorIcon from '../img/bi_x-octagon.svg';
+import okIcon from '../img/bi_check2-circle.svg';
+
 const form = document.querySelector('.form');
 
 form.addEventListener('submit', addResult);
@@ -18,14 +21,11 @@ function addResult(event) {
     return new Promise((resolve, reject) => {
       if (checkedInput === 'rejected') {
         return setTimeout(
-          () => reject(`\u274C Rejected promise in ${delay}ms`),
+          () => reject(`Error Rejected promise in ${delay}ms`),
           delay
         );
       }
-      setTimeout(
-        () => resolve(`\u2705 Fulfilled promise in ${delay}ms`),
-        delay
-      );
+      setTimeout(() => resolve(`OK Fulfilled promise in ${delay}ms`), delay);
     });
   }
 
@@ -35,7 +35,7 @@ function addResult(event) {
       iziToast.success({
         message: response,
         position: 'topRight',
-        iconUrl: '',
+        iconUrl: okIcon,
       });
     })
     .catch(error => {
@@ -43,7 +43,7 @@ function addResult(event) {
       iziToast.error({
         message: error,
         position: 'topRight',
-        iconUrl: '',
+        iconUrl: errorIcon,
       });
     });
 
