@@ -20,8 +20,9 @@ function addResult(event) {
         () => reject(`❌ Rejected promise in ${delay}ms`),
         delay
       );
+    } else {
+      setTimeout(() => resolve(`✅ Fulfilled promise in ${delay}ms`), delay);
     }
-    setTimeout(() => resolve(`✅ Fulfilled promise in ${delay}ms`), delay);
   });
 
   promise
