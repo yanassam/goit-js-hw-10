@@ -30,14 +30,14 @@ function addResult(event) {
       iziToast.success({
         message: response,
         position: 'topRight',
-        // iconUrl: okIcon,
+        iconUrl: '',
       });
     })
     .catch(error => {
       iziToast.error({
         message: error,
         position: 'topRight',
-        // iconUrl: errorIcon,
+        iconUrl: '',
       });
     });
 
