@@ -31,7 +31,7 @@ function addResult(event) {
 
   checkValue(checkedInput)
     .then(response => {
-      console.log(response);
+      // console.log(response);
       iziToast.success({
         message: response,
         position: 'topRight',
@@ -39,7 +39,7 @@ function addResult(event) {
       });
     })
     .catch(error => {
-      console.log(error);
+      // console.log(error);
       iziToast.error({
         message: error,
         position: 'topRight',
