@@ -79,3 +79,7 @@ button{
   border-radius: 8px;
   border: none;
 }
+
+.iziToast>.iziToast-body .iziToast-message{
+  color:  #FFFFFF,
+}
