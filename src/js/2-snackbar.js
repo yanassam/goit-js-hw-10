@@ -10,10 +10,8 @@ function creatPromise(state, delay) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       if (state === 'rejected') {
-        // reject(`❌ Rejected promise in ${delay}ms`);
         reject({ delay });
       } else if (state === 'fulfilled') {
-        // setTimeout(() => resolve(`✅ Fulfilled promise in ${delay}ms`), delay);
         resolve({ delay });
       }
     }, delay);
