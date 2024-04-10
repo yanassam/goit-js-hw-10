@@ -6,6 +6,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 const form = document.querySelector('.form');
 
 form.addEventListener('submit', addResult);
+
 function creatPromise(state, delay) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
